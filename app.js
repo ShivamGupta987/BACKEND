@@ -13,6 +13,9 @@ config()
 // Create an Express app
 const app = express()
 
+// url
+app.use(express.urlencoded({ extended:true}))
+
 // Middleware
 app.use(express.json())
 app.use(cookieParser())
