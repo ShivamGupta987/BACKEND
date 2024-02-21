@@ -1,14 +1,12 @@
 import nodemailer from './nodemailer';
 
-const transporter = nodemailer.createTransport({
-  host: "smtp.forwardemail.net",
-  port: 465,
-  secure: true,
+var transport = nodemailer.createTransport({
+  host: "sandbox.smtp.mailtrap.io",
+  port: 2525,
   auth: {
-    // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-    user: "REPLACE-WITH-YOUR-ALIAS@YOURDOMAIN.COM",
-    pass: "REPLACE-WITH-YOUR-GENERATED-PASSWORD",
-  },
+    user: "025ca5b91f9dda",
+    pass: "********9f19"
+  }
 });
 
 // async..await is not allowed in global scope, must use a wrapper
