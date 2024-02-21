@@ -5,6 +5,8 @@ import morgan from 'morgan'
 import cookieParser from 'cookie-parser'
 import { config } from "dotenv"
 import userRoutes from './src/routes/user.routes.js'
+import courseRoutes from './src/routes/course.routes.js'
+
 import errorMiddleware from './src/middlewares/error.middlewares.js'
 // import { register } from './controllers/user.controllers.js'
 
@@ -26,6 +28,7 @@ app.use(cors({
 app.use(morgan('dev'))
 
 app.use('/api/v1/users',userRoutes)
+app.use('/api/v1/courses',courseRoutes)
 // app.use('/api/v1/register',register)
 
 
