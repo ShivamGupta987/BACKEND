@@ -240,7 +240,7 @@ const changePassword = async (req, res) => {
   const isPasswordValid = await user.comparePassword(oldPassword);
 
   if (!isPasswordValid) {
-    return next(new AppError("Password ddoes not match", 400));
+    return next(new AppError("Password does not match", 400));
   }
 
   // match krgya hai toh
